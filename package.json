@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-app-rewire-hot-loader": "^1.0.0",
     "react-app-rewired": "^1.4.0",
@@ -16,10 +17,18 @@
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test --env=jsdom",
-    "storybook": "start-storybook -p 9001 -c .storybook"
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "format": "prettier-eslint \"src/**/*.js\" --write",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": ["npm run format", "git add"]
   },
   "devDependencies": {
     "@storybook/react": "^3.3.11",
-    "babel-core": "^6.26.0"
+    "babel-core": "^6.26.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^6.1.0",
+    "prettier-eslint-cli": "^4.7.0"
   }
 }
