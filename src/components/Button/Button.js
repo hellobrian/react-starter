@@ -6,7 +6,10 @@ class Button extends Component {
     isClicked: false
   };
 
-  handleClick = () => this.setState({ isClicked: !this.state.isClicked });
+  handleClick = () =>
+    this.setState({
+      isClicked: !this.state.isClicked
+    });
 
   render() {
     const { children, ...other } = this.props;
@@ -25,7 +28,7 @@ class Button extends Component {
 const StyledButton = styled.button`
   display: inline-flex;
   color: white;
-  background: ${(props) => (props.background ? "blue" : "red")};
+  background: ${props => (props.background ? "blue" : "red")};
   height: 50px;
   width: 250px;
   border: none;
