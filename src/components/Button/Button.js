@@ -6,10 +6,9 @@ class Button extends Component {
     isClicked: false
   };
 
-  handleClick = () =>
-    this.setState({
-      isClicked: !this.state.isClicked
-    });
+  handleClick = () => {
+    this.setState({ isClicked: !this.state.isClicked });
+  };
 
   render() {
     const { children, ...other } = this.props;
