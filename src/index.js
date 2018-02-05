@@ -9,7 +9,10 @@ import { createStore } from "redux";
 import { Provider } from "react-redux";
 import todoApp from "reducers/todo";
 
-let store = createStore(todoApp);
+let store = createStore(
+  todoApp,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
 
 const render = Component => {
   ReactDOM.render(
