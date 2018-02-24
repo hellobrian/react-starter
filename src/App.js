@@ -4,7 +4,7 @@ import "App.css";
 
 class App extends Component {
   render() {
-    return <Button>hi</Button>;
+    return <Button style={{ border: "5px solid black" }}>hi!!!</Button>;
   }
 }
 
